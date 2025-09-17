@@ -1,0 +1,35 @@
+Goal: Create a web app for the Cascade Cipher with a chat and encryption/decryption tool, using a clean, user-friendly interface in navy blue (#1E3A8A) and light gray (#E5E7EB).Cascade Cipher Description:Key: A word (e.g., "KOD") assigns numbers to letters (K=1, O=2, D=3, then A=4, B=5, ..., Z=26 for remaining alphabet).
+Start Number: An integer (e.g., 3) for the first letter.
+Encryption: Convert letter to number (from key table), add start number (first letter) or previous cipher letter's value, take modulo 26 (use 26 if 0), convert back to letter. Optionally, split into 5-letter groups, pad with X, reverse each group.
+Decryption: Reverse groups if needed, convert letter to number, subtract start number (first letter) or previous cipher letter's value, take modulo 26, convert to letter. Ignore padding X.
+Supports only A-Z and spaces; invalid characters trigger an error.
+
+Features:Chat:Messenger-like interface (user messages right, others left).
+Input message, key, start number; encrypt before sending ("Encrypt & Send" button).
+Decrypt received messages ("Decrypt" button).
+Checkbox for reverse group option.
+Encryption/Decryption Tool:Inputs: key, start number, message/ciphertext.
+Buttons: "Encrypt" and "Decrypt".
+Checkbox for reverse group option.
+Display result and errors (e.g., invalid key or characters).
+Validation:Key: A-Z only, min. 3 characters.
+Start number: Integer.
+Message: A-Z and spaces only.
+Show error messages (e.g., red #DC2626).
+Design:Colors: Navy blue (#1E3A8A) for headers, buttons, user message bubbles; light gray (#E5E7EB) for chat/tool background, input fields. Optional accent: light blue (#3B82F6) for hover effects.
+Layout: Navbar (navy) with title "Cascade Cipher"; chat and tool sections (side-by-side or stacked); responsive for mobile/desktop.
+Style: Minimalist, rounded inputs/buttons, clear fonts (e.g., Roboto), high-contrast text.
+
+Tech:Frontend: HTML, CSS, JavaScript (React or vanilla JS).
+Backend: Python (Flask/FastAPI) for cipher logic and chat storage.
+Optional: SQLite for chat history.
+Clear code with comments, local deployment instructions.
+
+Example:Encrypt "DUPA" (key: "KOD", start: 3, reverse on) → "XUQKC".
+Chat: Send "TEST" (encrypted as "XQWAW"), receiver decrypts to "TEST".
+
+Output:Full code (HTML/CSS/JS + Python).
+Deployment instructions (e.g., Flask setup).
+Optional: README with usage guide.
+Ensure intuitive, responsive UI with specified colors.
+
